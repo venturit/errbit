@@ -122,7 +122,7 @@ class Notice
   protected
 
   def decrease_counter_cache
-    problem.inc(:notices_count, -1) if err
+    problem.inc(notices_count: -1) if err
   end
 
   def remove_cached_attributes_from_problem
@@ -178,4 +178,3 @@ class Notice
   end
 
 end
-

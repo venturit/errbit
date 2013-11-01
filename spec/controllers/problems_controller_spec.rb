@@ -224,7 +224,7 @@ describe ProblemsController do
     end
 
     it "should redirect back to problems page" do
-      request.env["Referer"] = problems_path
+      request.env["HTTP_REFERER"] = problems_path
       put :resolve, :app_id => @problem.app.id, :id => @problem.problem.id
       response.should redirect_to(problems_path)
     end
@@ -418,4 +418,3 @@ describe ProblemsController do
   end
 
 end
-

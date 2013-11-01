@@ -217,12 +217,12 @@ describe AppsController do
         end
 
         it "should redirect to the app page" do
-          post :create, :app => {}
+          post :create, :app => {name: 'app'}
           response.should redirect_to(app_path(@app))
         end
 
         it "should display a message" do
-          post :create, :app => {}
+          post :create, :app => {name: 'app'}
           request.flash[:success].should match(/success/)
         end
       end
@@ -235,12 +235,12 @@ describe AppsController do
 
       context "when the update is successful" do
         it "should redirect to the app page" do
-          put :update, :id => @app.id, :app => {}
+          put :update, :id => @app.id, :app => {name: 'foo'}
           response.should redirect_to(app_path(@app))
         end
 
         it "should display a message" do
-          put :update, :id => @app.id, :app => {}
+          put :update, :id => @app.id, :app => {name: 'foo'}
           request.flash[:success].should match(/success/)
         end
       end
@@ -386,8 +386,5 @@ describe AppsController do
         end.to change { app.api_key }
       end
     end
-
   end
-
 end
-
