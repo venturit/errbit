@@ -45,9 +45,6 @@ module Errbit
       g.fixture_replacement :fabrication
     end
 
-    # Enable the mongoid identity map for performance
-    Mongoid.identity_map_enabled = true
-
     # IssueTracker subclasses use inheritance, so preloading models provides querying consistency in dev mode.
     config.mongoid.preload_models = true
 
@@ -71,4 +68,3 @@ module Errbit
     config.assets.version = '1.0'
   end
 end
-
