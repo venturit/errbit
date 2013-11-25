@@ -1,12 +1,20 @@
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: a9b962f17de359d3173cf0ece813c9020803d3af
+  revision: ec65b665430a13eab135fcd22b3b766bb8e8c8ea
   specs:
     mongoid (4.0.0)
       activemodel (~> 4.0.0)
       moped (~> 2.0.beta3)
       origin (~> 1.0)
       tzinfo (~> 0.3.37)
+
+GIT
+  remote: git://github.com/mongoid/moped.git
+  revision: 073e30bbc49f10d71a1ff3c8462f779f457e28f0
+  specs:
+    moped (2.0.0.beta3)
+      bson (~> 2.0.0.rc3)
+      optionable (~> 0.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -188,9 +196,6 @@ GEM
       bundler (>= 1.0.0)
       rails (>= 3.2.0)
       railties (>= 3.2.0)
-    moped (2.0.0.beta3)
-      bson (~> 2.0.0.rc3)
-      optionable (~> 0.1.1)
     multi_json (1.8.2)
     multi_xml (0.5.5)
     multipart-post (1.2.0)
@@ -406,6 +411,7 @@ DEPENDENCIES
   mongoid!
   mongoid-rspec
   mongoid_rails_migrations
+  moped!
   octokit (~> 1.18)
   omniauth-github
   oruen_redmine_client
